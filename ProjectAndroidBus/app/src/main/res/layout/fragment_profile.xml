@@ -1,0 +1,302 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9fcfb"
+    tools:context="com.example.training.ui.profile.ProfileFragment">
+
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:background="@drawable/bg2_profile" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="105dp"
+                android:layout_height="110dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="75dp"
+                android:background="@drawable/dway_bulat"
+                tools:layout_editor_absoluteX="-51dp"
+                tools:layout_editor_absoluteY="-21dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/labelUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="28dp"
+                    android:background="#f9fcfb"
+                    android:fontFamily="@font/actor"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.067"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/imgCalendar2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@+id/labelUsername"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="13dp"
+                    android:background="@mipmap/ic_calendar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.026"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/labelUsername"
+                    app:layout_constraintVertical_bias="0.882" />
+
+                <TextView
+                    android:id="@+id/labelJoin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelUsername"
+                    android:layout_marginTop="13dp"
+                    android:layout_toRightOf="@+id/imgCalendar2"
+                    android:background="#f9fcfb"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.959" />
+
+                <ImageView
+                    android:id="@+id/imgLogout"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="230dp"
+                    android:layout_marginTop="-7dp"
+                    android:background="@mipmap/ic_logout"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.815"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.242" />
+
+                <Button
+                    android:id="@+id/btnLogOut"
+                    android:layout_width="53dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="-7dp"
+                    android:layout_toEndOf="@+id/imgLogout"
+                    android:layout_toRightOf="@+id/imgLogout"
+                    android:background="@drawable/empty_button"
+                    android:text="Log Out"
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/imgLogout"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.187" />
+
+            </RelativeLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="left"
+                android:layout_marginTop="5dp"
+                app:tabIndicatorAnimationDuration="500"
+                app:tabIndicatorColor="#5C106A"
+                app:tabIndicatorHeight="4dp">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile" />
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <View
+                android:id="@+id/garisLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/black" />
+
+            <FrameLayout
+                android:id="@+id/frameEdit"
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/despair_rectangle">
+
+                <TextView
+                    android:id="@+id/labelFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="15dp"
+                    android:background="#f9fcfb"
+                    android:fontFamily="@font/actor"
+                    android:hint="First Name"
+                    android:text="First Name"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="-138dp"
+                    tools:layout_editor_absoluteY="356dp" />
+
+                <EditText
+                    android:id="@+id/editFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="15dp"
+                    android:clickable="false"
+                    android:editable="false"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:hint="First Name"
+                    android:inputType="textPersonName"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/labelLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginRight="15dp"
+                    android:background="#f9fcfb"
+                    android:fontFamily="@font/actor"
+                    android:hint="First Name"
+                    android:text="Last Name"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="-138dp"
+                    tools:layout_editor_absoluteY="356dp" />
+
+                <EditText
+                    android:id="@+id/editLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="130dp"
+                    android:layout_marginRight="15dp"
+                    android:clickable="false"
+                    android:editable="false"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:hint="Last Name"
+                    android:inputType="textPersonName"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/labelMobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="180dp"
+                    android:layout_marginRight="15dp"
+                    android:background="#f9fcfb"
+                    android:fontFamily="@font/actor"
+                    android:hint="First Name"
+                    android:text="Mobile Number"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="-138dp"
+                    tools:layout_editor_absoluteY="356dp" />
+
+                <EditText
+                    android:id="@+id/editMobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="210dp"
+                    android:layout_marginRight="15dp"
+                    android:clickable="false"
+                    android:editable="false"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:hint="Mobile Number"
+                    android:inputType="textPersonName"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/labelEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="261dp"
+                    android:layout_marginRight="15dp"
+                    android:background="#f9fcfb"
+                    android:fontFamily="@font/actor"
+                    android:hint="First Name"
+                    android:text="Email"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="-138dp"
+                    tools:layout_editor_absoluteY="356dp" />
+
+                <EditText
+                    android:id="@+id/editEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="295dp"
+                    android:layout_marginRight="15dp"
+                    android:clickable="false"
+                    android:editable="false"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:hint="Email"
+                    android:inputType="textPersonName"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="16sp" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
